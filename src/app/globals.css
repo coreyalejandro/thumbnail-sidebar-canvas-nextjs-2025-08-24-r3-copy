@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f0f10;
+  --card: #151517;
+  --ring: #1f1f22;
+  --text: #e7e7ea;
+  --sub: #a7a7ad;
+  --accent: #8f8f95;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-[color:var(--bg)] text-[color:var(--text)];
+}
+
+.card {
+  @apply bg-[color:var(--card)] border border-[color:var(--ring)] rounded-3xl shadow-lg;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl border border-[color:var(--ring)] bg-[color:var(--card)] hover:bg-black/30 px-3 py-2 text-sm;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #33353b;
+  border-radius: 999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Slide frame enhancements */
+.slide-frame-dragging {
+  cursor: grabbing !important;
+  user-select: none;
+}
+
+.slide-frame-resizing {
+  cursor: nw-resize !important;
+  user-select: none;
+}
+
+/* Add glow effect for shadow-glow class */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.05);
+}
